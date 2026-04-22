@@ -1,206 +1,697 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Eduardo Rihedy Dorneles - Desenvolvedor Web Full-Stack especializado em React, Node.js, TypeScript, NestJS e Next.js. Araraquara, SP.">
+    <meta name="keywords" content="desenvolvedor web, full-stack, react, node.js, typescript, nestjs, next.js, portfolio, eduardo rihedy">
+    <meta name="author" content="Eduardo Rihedy Dorneles">
+    <meta property="og:title" content="Eduardo Rihedy Dorneles | Desenvolvedor Web Full-Stack">
+    <meta property="og:description" content="Portfólio profissional — React, Node.js, TypeScript, NestJS, Next.js">
+    <meta property="og:type" content="website">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio Eduardo Rihedy Dorneles</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Eduardo</a>
+    <title>Eduardo Rihedy Dorneles | Desenvolvedor Web Full-Stack</title>
+  </head>
+  <body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Eduardo<span>.</span></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#hero" class="nav__link active-link" data-i18n="nav_home">Início</a></li>
+            <li><a href="#about" class="nav__link" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="#experience" class="nav__link" data-i18n="nav_experience">Experiência</a></li>
+            <li><a href="#skills" class="nav__link" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#education" class="nav__link" data-i18n="nav_education">Formação</a></li>
+            <li><a href="#projects" class="nav__link" data-i18n="nav_projects">Projetos</a></li>
+            <li><a href="#contact" class="nav__link" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+          <button class="nav__close" id="nav-close"><i class='bx bx-x'></i></button>
+        </div>
+
+        <div class="nav__actions">
+          <button class="nav__theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+            <i class='bx bx-moon'></i>
+            <i class='bx bx-sun'></i>
+          </button>
+          <button class="nav__lang-toggle" id="lang-toggle" aria-label="Mudar idioma">
+            <i class='bx bx-globe'></i>
+            <span id="lang-label">EN</span>
+          </button>
+          <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+            <i class='bx bx-menu'></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero section" id="hero">
+        <div class="hero__container container">
+          <div class="hero__data">
+            <p class="hero__greeting" data-i18n="hero_greeting">Olá, eu sou</p>
+            <h1 class="hero__name">
+              <span class="hero__name-highlight">Eduardo Rihedy</span><br>
+              <span data-i18n="hero_role">Desenvolvedor Web</span>
+            </h1>
+
+            <div class="hero__typing-wrapper">
+              <span class="hero__typing" id="typed-text"></span>
+            </div>
+
+            <p class="hero__description" data-i18n="hero_description">
+              Desenvolvedor Full-Stack com experiência em criação de APIs, aplicações web e landing pages. 
+              Especializado em React, Node.js, TypeScript e NestJS.
+            </p>
+
+            <div class="hero__buttons">
+              <a href="assets/pdf/EduardoRihedyDorneles.pdf" class="btn btn--primary" download="EduardoRihedy_CV.pdf" target="_blank">
+                <i class='bx bx-download'></i>
+                <span data-i18n="hero_download">Download CV</span>
+              </a>
+              <a href="#contact" class="btn btn--outline">
+                <i class='bx bx-message-dots'></i>
+                <span data-i18n="hero_contact">Fale Comigo</span>
+              </a>
+            </div>
+
+            <div class="hero__social">
+              <a href="https://www.linkedin.com/in/eduardo-rihedy-dorneles/" target="_blank" class="hero__social-link" aria-label="LinkedIn">
+                <i class='bx bxl-linkedin'></i>
+              </a>
+              <a href="https://github.com/DuuhRihedy" target="_blank" class="hero__social-link" aria-label="GitHub">
+                <i class='bx bxl-github'></i>
+              </a>
+              <a href="mailto:duuh.dorneles@gmail.com" class="hero__social-link" aria-label="Email">
+                <i class='bx bx-envelope'></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__img-wrapper">
+            <svg class="hero__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0" mask-type="alpha">
+                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+              </mask>
+              <g mask="url(#mask0)">
+                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                <image class="hero__blob-img" x="-1" y="-150" width="600" href="assets/img/foto1.jpg"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="about section" id="about">
+        <div class="container">
+          <h2 class="section__title" data-i18n="about_title">Sobre Mim</h2>
+          <p class="section__subtitle" data-i18n="about_subtitle">Conheça minha trajetória e experiência profissional</p>
+
+          <div class="about__container">
+            <div class="about__img-wrapper">
+              <img src="assets/img/foto2.jpg" alt="Eduardo Rihedy Dorneles" class="about__img">
+            </div>
+
+            <div class="about__data">
+              <p class="about__text" data-i18n="about_text1">
+                Sou Desenvolvedor Web e professor de Informática, formado em Análise e Desenvolvimento de Sistemas, 
+                com experiência prática na criação de APIs, aplicações web e landing pages utilizadas em ambientes reais de negócio.
+              </p>
+              <p class="about__text" data-i18n="about_text2">
+                Atualmente, atuo como Desenvolvedor Web na Biosanté, onde trabalho com front-end e back-end, 
+                criando landing pages, integrações com CMS, tracking, SEO e plataformas como Shopify (GemPages) e WordPress. 
+                Utilizo tecnologias como React, Next.js, Node.js, NestJS, TypeScript e PostgreSQL.
+              </p>
+              <p class="about__text" data-i18n="about_text3">
+                Anteriormente, na Keys4Play, contribuí diretamente para reduzir um cronograma de um ano para quatro meses 
+                através de soluções eficientes no backend. Também atuo como professor, ensinando desde fundamentos 
+                de computação até programação e análise de dados.
+              </p>
+
+              <div class="about__stats">
+                <div class="stat-card glass-card">
+                  <div class="stat-card__number" data-counter="2">0</div>
+                  <div class="stat-card__label" data-i18n="stat_years">+ Anos de Experiência</div>
                 </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Portifolio</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
+                <div class="stat-card glass-card">
+                  <div class="stat-card__number" data-counter="5">0</div>
+                  <div class="stat-card__label" data-i18n="stat_projects">+ Projetos Entregues</div>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="stat-card glass-card">
+                  <div class="stat-card__number" data-counter="263">0</div>
+                  <div class="stat-card__label" data-i18n="stat_hours">+ Horas de Cursos</div>
                 </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Eduardo</span><br>Web Developer</h1>
-
-                    <a href="assets/pdf/EduardoRihedyDorneles.pdf" class="button" download="Eduardo.pdf" target="_blank">Download CV</a>
+                <div class="stat-card glass-card">
+                  <div class="stat-card__number" data-counter="3">0</div>
+                  <div class="stat-card__label" data-i18n="stat_companies">Empresas</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/eduardo-rihedy-dorneles/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/DuuhRihedy" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+      <!-- ===== EXPERIENCE ===== -->
+      <section class="experience section" id="experience">
+        <div class="container">
+          <h2 class="section__title" data-i18n="exp_title">Experiência Profissional</h2>
+          <p class="section__subtitle" data-i18n="exp_subtitle">Minha trajetória no mercado de tecnologia</p>
+
+          <div class="experience__container">
+            <!-- Biosanté -->
+            <div class="experience__item">
+              <div class="experience__dot"></div>
+              <div class="experience__card glass-card">
+                <div class="experience__header">
+                  <div>
+                    <h3 class="experience__role" data-i18n="exp1_role">Desenvolvedor Web</h3>
+                    <p class="experience__company">Biosanté</p>
+                  </div>
+                  <span class="experience__period" data-i18n="exp1_period">Fev 2026 — Presente</span>
                 </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="10" y="0" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
+                <p class="experience__description" data-i18n="exp1_desc">
+                  Atuo no desenvolvimento e manutenção de sistemas web, landing pages e integrações para o e-commerce. 
+                  Trabalho com front-end e back-end, incluindo criação de páginas com código próprio e plataformas como 
+                  Shopify (GemPages) e WordPress (Elementor). Responsável por implementações de tracking, SEO, 
+                  edição de Liquid HTML e deploy automatizado via Cloudflare. Utilizo ferramentas de IA para otimização do desenvolvimento.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">HTML/CSS/JS</span>
+                  <span class="experience__tag">TypeScript</span>
+                  <span class="experience__tag">Node.js</span>
+                  <span class="experience__tag">NestJS</span>
+                  <span class="experience__tag">Next.js</span>
+                  <span class="experience__tag">PostgreSQL</span>
+                  <span class="experience__tag">Shopify</span>
+                  <span class="experience__tag">Liquid</span>
+                  <span class="experience__tag">SEO</span>
+                  <span class="experience__tag">Tracking</span>
+                  <span class="experience__tag">Cloudflare</span>
                 </div>
-            </section>
+              </div>
+            </div>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/phone.png" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Eduardo</h2>
-                        <p class="about__text">I am a full-stack developer with solid experience in front-end technologies such as HTML,
-                             CSS, JavaScript, and TypeScript, along with strong expertise in back-end development using Node.js and SQL.
-                              My academic background in Systems Analysis and Development has strengthened my technical skills and provided
-                               a solid foundation in software development.</p>           
-                    </div>                                   
+            <!-- Sette Modi -->
+            <div class="experience__item">
+              <div class="experience__dot"></div>
+              <div class="experience__card glass-card">
+                <div class="experience__header">
+                  <div>
+                    <h3 class="experience__role" data-i18n="exp2_role">Professor de Tecnologia da Informação</h3>
+                    <p class="experience__company">Sette Modi</p>
+                  </div>
+                  <span class="experience__period" data-i18n="exp2_period">Nov 2024 — Fev 2026</span>
                 </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">Lately I have been working with the following tools:</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-typescript skills__icon' ></i>
-                                <span class="skills__name">TYPESCRIPT</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-nodejs skills__icon' ></i>
-                                <span class="skills__name">Node.js</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-postgresql skills__icon' ></i>
-                                <span class="skills__name">SQL</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-react skills__icon'></i> 
-                                <span class="skills__name">React</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>              
-                        <img src="assets/img/tech.png" alt="" class="skills__img">
-                    </div>
+                <p class="experience__description" data-i18n="exp2_desc">
+                  Lecionei informática e hardware, sendo responsável pela preparação de conteúdos didáticos. 
+                  Renovei as apostilas inserindo conteúdos atualizados como Roblox Studio, Python, SQL e Power BI. 
+                  A nova grade de ensino resultou em aumento de 22% nas vendas dos cursos e aprovação da 
+                  certificação pelo MEC.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">Python</span>
+                  <span class="experience__tag">SQL</span>
+                  <span class="experience__tag">Power BI</span>
+                  <span class="experience__tag">Hardware</span>
+                  <span class="experience__tag">Arduino</span>
                 </div>
-            </section>
+              </div>
+            </div>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">My Projects</h2>
+            <!-- Keys4Play -->
+            <div class="experience__item">
+              <div class="experience__dot"></div>
+              <div class="experience__card glass-card">
+                <div class="experience__header">
+                  <div>
+                    <h3 class="experience__role" data-i18n="exp3_role">Desenvolvedor FullStack</h3>
+                    <p class="experience__company">Keys4Play</p>
+                  </div>
+                  <span class="experience__period" data-i18n="exp3_period">Nov 2024 — Jul 2025</span>
+                </div>
+                <p class="experience__description" data-i18n="exp3_desc">
+                  Atuei no desenvolvimento e manutenção de um e-commerce de jogos digitais. Responsável pela criação 
+                  do banco de dados, elaboração de documentação e manutenção interna. Utilizei uma base de dados 
+                  externa para otimizar o preenchimento de informações, reduzindo o tempo de entrega de um ano 
+                  para apenas quatro meses.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">React</span>
+                  <span class="experience__tag">TypeScript</span>
+                  <span class="experience__tag">NestJS</span>
+                  <span class="experience__tag">Prisma ORM</span>
+                  <span class="experience__tag">SQL</span>
+                  <span class="experience__tag">Swagger</span>
+                  <span class="experience__tag">Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div class="work__container bd-grid">
-                    
-                    <a href="https://key4play.com/pt-br/games-pc?utm_source=games&utm_medium=bill&utm_campaign=1&gad_source=1&gad_campaignid=23464156250&gclid=Cj0KCQiA1czLBhDhARIsAIEc7ug4QNm17Bd8-XU-1D6ucB8wcAIFGuJsxOkBvqyHDbZ4ageU_LAwF1gaApghEALw_wcB" target="_blank" class="work__img">
-                        <p class="about__text">E-commerce Key4Play</p>
-                        <img src="assets/img/key4playEdit.png" alt="">
+      <!-- ===== SKILLS ===== -->
+      <section class="skills section" id="skills">
+        <div class="container">
+          <h2 class="section__title" data-i18n="skills_title">Habilidades Técnicas</h2>
+          <p class="section__subtitle" data-i18n="skills_subtitle">Tecnologias e ferramentas que utilizo no dia a dia</p>
+
+          <div class="skills__categories">
+            <!-- Back-End -->
+            <div class="skills__category glass-card">
+              <h3 class="skills__category-title">
+                <i class='bx bx-server skills__category-icon'></i>
+                Back-End
+              </h3>
+              <div class="skills__grid">
+                <span class="skill-pill"><i class='bx bxl-typescript'></i> TypeScript</span>
+                <span class="skill-pill"><i class='bx bxl-nodejs'></i> NestJS</span>
+                <span class="skill-pill"><i class='bx bxl-nodejs'></i> Node.js</span>
+                <span class="skill-pill"><i class='bx bx-code-alt'></i> Next.js</span>
+                <span class="skill-pill"><i class='bx bxl-python'></i> Python</span>
+                <span class="skill-pill"><i class='bx bxl-postgresql'></i> PostgreSQL</span>
+                <span class="skill-pill"><i class='bx bx-data'></i> SQL</span>
+                <span class="skill-pill"><i class='bx bx-data'></i> Prisma ORM</span>
+                <span class="skill-pill"><i class='bx bx-file'></i> Swagger</span>
+              </div>
+            </div>
+
+            <!-- Front-End -->
+            <div class="skills__category glass-card">
+              <h3 class="skills__category-title">
+                <i class='bx bx-palette skills__category-icon'></i>
+                Front-End
+              </h3>
+              <div class="skills__grid">
+                <span class="skill-pill"><i class='bx bxl-react'></i> React</span>
+                <span class="skill-pill"><i class='bx bxl-html5'></i> HTML5</span>
+                <span class="skill-pill"><i class='bx bxl-css3'></i> CSS3</span>
+                <span class="skill-pill"><i class='bx bxl-javascript'></i> JavaScript</span>
+                <span class="skill-pill"><i class='bx bx-code-curly'></i> Liquid</span>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills__category glass-card">
+              <h3 class="skills__category-title">
+                <i class='bx bx-wrench skills__category-icon'></i>
+                <span data-i18n="skills_tools">Ferramentas</span>
+              </h3>
+              <div class="skills__grid">
+                <span class="skill-pill"><i class='bx bxl-git'></i> Git</span>
+                <span class="skill-pill"><i class='bx bxl-github'></i> GitHub</span>
+                <span class="skill-pill"><i class='bx bx-cloud'></i> Cloudflare</span>
+                <span class="skill-pill"><i class='bx bxl-shopify'></i> Shopify / GemPages</span>
+                <span class="skill-pill"><i class='bx bxl-wordpress'></i> WordPress / Elementor</span>
+                <span class="skill-pill"><i class='bx bxl-figma'></i> Figma</span>
+                <span class="skill-pill"><i class='bx bxl-docker'></i> Docker</span>
+              </div>
+            </div>
+
+            <!-- Extra Skills -->
+            <div class="skills__category glass-card">
+              <h3 class="skills__category-title">
+                <i class='bx bx-star skills__category-icon'></i>
+                <span data-i18n="skills_extra">Conhecimentos Extras</span>
+              </h3>
+              <div class="skills__grid">
+                <span class="skill-pill"><i class='bx bx-line-chart'></i> Tracking & SEO</span>
+                <span class="skill-pill"><i class='bx bx-bot'></i> IA (Claude Code)</span>
+                <span class="skill-pill"><i class='bx bx-spreadsheet'></i> Excel Avançado</span>
+                <span class="skill-pill"><i class='bx bx-movie'></i> Adobe Premiere</span>
+                <span class="skill-pill"><i class='bx bx-image'></i> Photoshop</span>
+                <span class="skill-pill"><i class='bx bx-bar-chart-alt-2'></i> Power BI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section class="education section" id="education">
+        <div class="container">
+          <h2 class="section__title" data-i18n="edu_title">Formação</h2>
+          <p class="section__subtitle" data-i18n="edu_subtitle">Educação e certificações profissionais</p>
+
+          <div class="education__container">
+            <!-- Academic -->
+            <div>
+              <h3 class="education__group-title">
+                <i class='bx bx-book-open'></i>
+                <span data-i18n="edu_academic">Formação Acadêmica</span>
+              </h3>
+              <div class="education__cards">
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title" data-i18n="edu1_title">Análise e Desenvolvimento de Sistemas</h4>
+                  <p class="education__card-institution">FATEC Araraquara</p>
+                  <p class="education__card-period">2022 — 2025</p>
+                  <p class="education__card-description" data-i18n="edu1_desc">
+                    Tecnólogo com foco em programação, desenvolvimento web, segurança da informação, 
+                    criptografia, estatística e análise de dados.
+                  </p>
+                </div>
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title" data-i18n="edu2_title">Técnico em Informática</h4>
+                  <p class="education__card-institution">ETEC — Escola Técnica Estadual de São Paulo</p>
+                  <p class="education__card-period">2010 — 2011</p>
+                  <p class="education__card-description" data-i18n="edu2_desc">
+                    Formação técnica em informática incluindo redes, hardware, design e programação.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+              <h3 class="education__group-title">
+                <i class='bx bx-certification'></i>
+                <span data-i18n="edu_certs">Certificações & Cursos</span>
+              </h3>
+              <div class="education__cards">
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title">Voxy Proficiency Achievement Certificate</h4>
+                  <p class="education__card-institution">Voxy</p>
+                  <p class="education__card-period" data-i18n="cert1_period">Emitida em Jan 2026</p>
+                </div>
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title" data-i18n="cert2_title">Back-End JavaScript e TypeScript — Básico ao Avançado</h4>
+                  <p class="education__card-institution">Luiz Otavio Miranda | Udemy</p>
+                  <p class="education__card-period">2024</p>
+                  <span class="education__card-hours">146 horas</span>
+                </div>
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title" data-i18n="cert3_title">Desenvolvimento Front-End Serliv</h4>
+                  <p class="education__card-institution">Daniel Tapias | Udemy</p>
+                  <p class="education__card-period">2023</p>
+                  <span class="education__card-hours">117 horas</span>
+                </div>
+              </div>
+
+              <!-- Languages -->
+              <h3 class="education__group-title" style="margin-top: 2rem;">
+                <i class='bx bx-globe'></i>
+                <span data-i18n="edu_langs">Idiomas</span>
+              </h3>
+              <div class="education__cards">
+                <div class="education__card glass-card">
+                  <h4 class="education__card-title" data-i18n="lang_en">Inglês</h4>
+                  <p class="education__card-description" data-i18n="lang_en_desc">
+                    Escrita: Avançado | Leitura: Avançado | Conversação: Intermediário
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <h2 class="section__title" data-i18n="proj_title">Meus Projetos</h2>
+          <p class="section__subtitle" data-i18n="proj_subtitle">Alguns dos projetos que desenvolvi</p>
+
+          <div class="projects__grid">
+            <!-- Velkryon -->
+            <div class="project-card glass-card">
+              <div class="project-card__img-wrapper">
+                <img src="assets/img/hub_rpg.png" alt="Velkryon" class="project-card__img">
+                <div class="project-card__overlay">
+                  <div class="project-card__links">
+                    <a href="https://hub-rpg.vercel.app" target="_blank" class="project-card__link">
+                      <i class='bx bx-link-external'></i> Live
                     </a>
-                    <a href="https://attento.med.br" class="work__img" target="_blank">
-                        <p class="about__text">Attento Saúde do Trabalho</p>
-                        <img src="assets/img/attentoEdit.png" alt="">
-                    </a>
-                    <a href="https://duuhrihedy.github.io/ProjetoListaDeTarefas/" class="work__img" target="_blank">
-                        <p class="about__text">CRUD Lista de Tarefas</p>
-                        <img src="assets/img/tarefas.png" alt="">
-                    </a>
-                    <a href="" class="work__img" target="_blank">
-                        <p class="about__text">E-commerce Rock n' Bakery</p>
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img" target="_blank">
-                        <p class="about__text">Soon...</p>
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img" target="_blank">
-                        <p class="about__text">Soon...</p>
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
+                  </div>
                 </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form" id="contactForm">
-                        <input type="text" id="name" placeholder="Name" class="contact__input">
-                        <input type="email" id="email" placeholder="Email" class="contact__input">
-                        <textarea name="" id="message" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="submit" value="Enviar" class="contact__button button">
-                    </form>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Velkryon</h3>
+                <p class="project-card__description" data-i18n="proj_velkryon_desc">
+                  Plataforma VTT (Virtual Tabletop) profissional para RPG. Inclui sistema de fichas, 
+                  automações avançadas para TaleSpire e portal de assinaturas.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Next.js 15</span>
+                  <span class="project-card__tag">React 19</span>
+                  <span class="project-card__tag">TypeScript</span>
+                  <span class="project-card__tag">Prisma</span>
+                  <span class="project-card__tag">PostgreSQL</span>
                 </div>
-            </section>
-        </main>
+              </div>
+            </div>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Made by Eduardo Rihedy</p>
-            <p class="footer__copy">&#169; Dorns Midia Tech. All rigths reserved</p>
-        </footer>
+            <!-- Blocksmith -->
+            <div class="project-card glass-card">
+              <div class="project-card__img-wrapper">
+                <img src="assets/img/blocksmith.png" alt="Blocksmith Editor" class="project-card__img">
+                <div class="project-card__overlay">
+                  <div class="project-card__links">
+                    <a href="https://duuhrihedy.github.io/blocksmith/" target="_blank" class="project-card__link">
+                      <i class='bx bx-link-external'></i> Live
+                    </a>
+                    <a href="https://github.com/DuuhRihedy/blocksmith" target="_blank" class="project-card__link project-card__link--outline">
+                      <i class='bx bxl-github'></i> Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Blocksmith Editor</h3>
+                <p class="project-card__description" data-i18n="proj_block_desc">
+                  Editor de texto rico modular e de alta performance. Focado em produtividade 
+                  com salvamento offline automático e exportação para múltiplos formatos (PDF/DOCX).
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Vite</span>
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Tiptap</span>
+                  <span class="project-card__tag">IndexedDB</span>
+                </div>
+              </div>
+            </div>
 
+            <!-- Keys4Play -->
+            <div class="project-card glass-card">
+              <div class="project-card__img-wrapper">
+                <img src="assets/img/key4playEdit.png" alt="Keys4Play E-commerce" class="project-card__img">
+                <div class="project-card__overlay">
+                  <div class="project-card__links">
+                    <a href="https://key4play.com" target="_blank" class="project-card__link">
+                      <i class='bx bx-link-external'></i> Live
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">E-commerce Keys4Play</h3>
+                <p class="project-card__description" data-i18n="proj1_desc">
+                  Plataforma de e-commerce para vendas de jogos digitais. Desenvolvimento full-stack 
+                  com foco no backend, banco de dados e documentação.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">NestJS</span>
+                  <span class="project-card__tag">TypeScript</span>
+                  <span class="project-card__tag">Prisma</span>
+                  <span class="project-card__tag">SQL</span>
+                </div>
+              </div>
+            </div>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <!-- Attento -->
+            <div class="project-card glass-card">
+              <div class="project-card__img-wrapper">
+                <img src="assets/img/attentoEdit.png" alt="Attento Saúde do Trabalho" class="project-card__img">
+                <div class="project-card__overlay">
+                  <div class="project-card__links">
+                    <a href="https://attento.med.br" target="_blank" class="project-card__link">
+                      <i class='bx bx-link-external'></i> Live
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Attento Saúde do Trabalho</h3>
+                <p class="project-card__description" data-i18n="proj2_desc">
+                  Website institucional para empresa de saúde ocupacional. Landing page responsiva 
+                  com foco em conversão e SEO.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">HTML</span>
+                  <span class="project-card__tag">CSS</span>
+                  <span class="project-card__tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script src="assets/js/sendEmail.js"></script>
-    </body>
+            <!-- CRUD Tarefas -->
+            <div class="project-card glass-card">
+              <div class="project-card__img-wrapper">
+                <img src="assets/img/tarefas.png" alt="CRUD Lista de Tarefas" class="project-card__img">
+                <div class="project-card__overlay">
+                  <div class="project-card__links">
+                    <a href="https://duuhrihedy.github.io/ProjetoListaDeTarefas/" target="_blank" class="project-card__link">
+                      <i class='bx bx-link-external'></i> Live
+                    </a>
+                    <a href="https://github.com/DuuhRihedy/ProjetoListaDeTarefas" target="_blank" class="project-card__link project-card__link--outline">
+                      <i class='bx bxl-github'></i> Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">CRUD Lista de Tarefas</h3>
+                <p class="project-card__description" data-i18n="proj3_desc">
+                  Aplicação completa de gerenciamento de tarefas com operações CRUD. Interface intuitiva 
+                  para criar, editar, marcar e excluir tarefas.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">HTML</span>
+                  <span class="project-card__tag">CSS</span>
+                  <span class="project-card__tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <h2 class="section__title" data-i18n="contact_title">Contato</h2>
+          <p class="section__subtitle" data-i18n="contact_subtitle">Vamos trabalhar juntos? Entre em contato!</p>
+
+          <div class="contact__container">
+            <div class="contact__info">
+              <p class="contact__info-text" data-i18n="contact_text">
+                Estou disponível para oportunidades full-stack ou back-end, tanto remoto quanto híbrido. 
+                Envie uma mensagem e retorno o mais breve possível!
+              </p>
+
+              <div class="contact__items">
+                <div class="contact__item">
+                  <div class="contact__item-icon">
+                    <i class='bx bx-envelope'></i>
+                  </div>
+                  <div class="contact__item-data">
+                    <h4>Email</h4>
+                    <a href="mailto:duuh.dorneles@gmail.com">duuh.dorneles@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact__item">
+                  <div class="contact__item-icon">
+                    <i class='bx bx-map'></i>
+                  </div>
+                  <div class="contact__item-data">
+                    <h4 data-i18n="contact_location">Localização</h4>
+                    <p>Araraquara, SP — Brasil</p>
+                  </div>
+                </div>
+
+                <div class="contact__item">
+                  <div class="contact__item-icon">
+                    <i class='bx bx-briefcase'></i>
+                  </div>
+                  <div class="contact__item-data">
+                    <h4 data-i18n="contact_availability">Disponibilidade</h4>
+                    <p data-i18n="contact_avail_text">Remoto · Híbrido · Presencial</p>
+                  </div>
+                </div>
+
+                <a href="https://www.linkedin.com/in/eduardo-rihedy-dorneles/" target="_blank" class="contact__item">
+                  <div class="contact__item-icon">
+                    <i class='bx bxl-linkedin'></i>
+                  </div>
+                  <div class="contact__item-data">
+                    <h4>LinkedIn</h4>
+                    <p>eduardo-rihedy-dorneles</p>
+                  </div>
+                </a>
+
+                <a href="https://github.com/DuuhRihedy" target="_blank" class="contact__item">
+                  <div class="contact__item-icon">
+                    <i class='bx bxl-github'></i>
+                  </div>
+                  <div class="contact__item-data">
+                    <h4>GitHub</h4>
+                    <p>DuuhRihedy</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact__form-wrapper glass-card">
+              <form class="contact__form" id="contactForm">
+                <div class="contact__input-group">
+                  <input type="text" id="name" name="from_name" class="contact__input" required
+                    placeholder="Seu nome" data-i18n-placeholder="form_name">
+                </div>
+                <div class="contact__input-group">
+                  <input type="email" id="email" name="from_email" class="contact__input" required
+                    placeholder="Seu email" data-i18n-placeholder="form_email">
+                </div>
+                <div class="contact__input-group">
+                  <textarea id="message" name="message" rows="6" class="contact__input" required
+                    placeholder="Sua mensagem..." data-i18n-placeholder="form_message"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary contact__submit" id="submitBtn">
+                  <span class="btn__text">
+                    <i class='bx bx-send'></i>
+                    <span data-i18n="form_send">Enviar Mensagem</span>
+                  </span>
+                  <div class="btn__loader"></div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/eduardo-rihedy-dorneles/" target="_blank" class="footer__social-link" aria-label="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://github.com/DuuhRihedy" target="_blank" class="footer__social-link" aria-label="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="mailto:duuh.dorneles@gmail.com" class="footer__social-link" aria-label="Email">
+            <i class='bx bx-envelope'></i>
+          </a>
+        </div>
+        <p class="footer__text" data-i18n="footer_made">Feito com <span>❤️</span> por Eduardo Rihedy</p>
+        <p class="footer__copy">&copy; 2026 Dorns Tech Service. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
+  </body>
 </html>
