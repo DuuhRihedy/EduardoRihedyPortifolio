@@ -274,11 +274,13 @@ const translations = {
     // Projects
     proj_title: 'My Projects',
     proj_subtitle: 'Some of the projects I have built',
+    proj_soon: 'Coming Soon',
     proj_velkryon_desc: 'Professional VTT (Virtual Tabletop) platform for RPG. Includes character sheet systems, advanced automations for TaleSpire, and a dedicated subscription portal.',
     proj_block_desc: 'Modular and high-performance rich-text editor. Focused on productivity with automatic offline saving and export to multiple formats (PDF/DOCX).',
     proj1_desc: 'E-commerce platform for digital game sales. Full-stack development focused on backend, database and documentation.',
     proj2_desc: 'Institutional website for an occupational health company. Responsive landing page focused on conversion and SEO.',
     proj3_desc: 'Complete task management application with CRUD operations. Intuitive interface to create, edit, check and delete tasks.',
+    proj4_desc: 'My personalized version of Spotify. An advanced music player consuming Spotify and YouTube Music APIs for a unified experience.',
 
     // Contact
     contact_title: 'Contact',
