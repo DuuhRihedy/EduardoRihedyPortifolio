@@ -282,7 +282,8 @@ const translations = {
     proj3_desc: 'Complete task management application with CRUD operations. Intuitive interface to create, edit, check and delete tasks.',
     proj_canela_desc: 'High-performance website for Canela Café emporium. Features a premium experience with fluid transitions and responsive UI.',
     proj_lepaiper_desc: 'Internal system I developed for Papelaria Lê Paiper. Focused on optimizing and automating business processes.',
-    proj4_desc: 'My personalized version of Spotify. An advanced music player consuming Spotify and YouTube Music APIs for a unified experience.',
+    proj_etarp_desc: 'Grupo ETARP — From production line labels to the system that governs your operations. Custom labels, commercial automation, hardware, and software.',
+    proj_soon_desc: 'Dorns Tracking Hub — Centralized advanced tracking (GTM/Meta Pixel) with real-time smart pixel routing for multiple e-commerce platforms.',
 
     // Contact
     contact_title: 'Contact',
@@ -294,7 +295,7 @@ const translations = {
     form_send: 'Send Message',
 
     // Footer
-    footer_made: 'Made with <span>❤️</span> by Eduardo Rihedy',
+    footer_made: 'Eduardo Rihedy Dorneles — Full-Stack Web Developer',
     footer_rights: 'All rights reserved.',
   }
 };
