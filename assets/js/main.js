@@ -88,8 +88,9 @@ const phrases = [
   'Full-Stack Developer',
   'React | Node.js | NestJS',
   'TypeScript | Next.js',
+  'Prisma | PostgreSQL',
+  'Playwright | Vitest',
   'Creator of Velkryon VTT',
-  'Tracking & SEO',
 ];
 
 let phraseIndex = 0;
@@ -220,40 +221,47 @@ const translations = {
 
     // Hero
     hero_greeting: "Hi, I'm",
-    hero_role: 'Web Developer',
-    hero_description: 'Full-Stack Developer with experience in building APIs, web applications and landing pages. Specialized in React, Node.js, TypeScript and NestJS.',
+    hero_role: 'Full-Stack Developer',
+    hero_description: 'Full-Stack Developer who delivered an e-commerce project 66% ahead of schedule and doubled a development team\'s productivity with automation and AI. TypeScript, React, Next.js, NestJS, Prisma and PostgreSQL.',
     hero_download: 'Download CV',
     hero_contact: "Let's Talk",
 
     // About
     about_title: 'About Me',
     about_subtitle: 'Get to know my journey and professional experience',
-    about_text1: "I'm a Web Developer and IT teacher with a degree in Systems Analysis and Development, with hands-on experience building APIs, web applications and landing pages used in real business environments.",
-    about_text2: 'Currently, I work as a Web Developer at Biosanté, where I handle front-end and back-end development, creating landing pages, CMS integrations, tracking, SEO and platforms like Shopify (GemPages) and WordPress. I use technologies such as React, Next.js, Node.js, NestJS, TypeScript and PostgreSQL.',
-    about_text3: 'Previously, at Keys4Play, I directly contributed to reducing a one-year timeline to four months through efficient backend solutions. I also work as a teacher, covering topics from computer fundamentals to programming and data analysis.',
-    stat_years: '+ Year of Experience',
+    about_text1: "I'm a Full-Stack Developer with a degree in Systems Analysis and Development (FATEC), currently pursuing a postgraduate degree in Software Engineering with Applied AI (UNIPDS). I work with TypeScript, React 19, Next.js 16, Node.js, NestJS, Prisma and PostgreSQL, with automated testing in Playwright and Vitest.",
+    about_text2: 'At Keys4Play, I built the database and the NestJS REST API for a digital games e-commerce and automated the catalog ingestion from an external database, cutting the project timeline from 12 to 4 months. At Biosanté, I built an internal platform and AI-powered automations (Claude Code) that more than doubled the development team\'s productivity.',
+    about_text3: 'Before coding full-time, I spent 8 years in infrastructure, technical support and teaching: I moved 270 employees to remote work without a single day of downtime and rebuilt a school\'s course curriculum, increasing sales by 22% and earning MEC accreditation.',
+    stat_years: '+ Years in Tech',
     stat_projects: '+ Projects Delivered',
-    stat_hours: '+ Course Hours',
+    stat_hours: '% Ahead of Schedule',
     stat_companies: 'Companies',
 
     // Experience
     exp_title: 'Professional Experience',
     exp_subtitle: 'My journey in the tech industry',
-    exp1_role: 'Web Developer',
-    exp1_period: 'Feb 2026 — Present',
-    exp1_desc: 'I develop and maintain web systems, landing pages and integrations for e-commerce. Working with front-end and back-end, including custom-coded pages and platforms like Shopify (GemPages) and WordPress (Elementor). Responsible for tracking, SEO, Liquid HTML editing and automated deployment via Cloudflare. Using AI tools for development optimization.',
-    exp2_role: 'IT Teacher',
+    exp1_role: 'Full-Stack Web Developer',
+    exp1_period: '2025 — Oct 2026',
+    exp1_desc: 'Built and maintained the e-commerce web applications and landing pages on both front-end and back-end, integrating payment gateways, tracking (Bemob), Shopify (GemPages), WordPress (Elementor) and automated deployment via Cloudflare. Replaced generic management tools with an internal platform integrated into the codebase and brought AI (Claude Code) into the workflow, more than doubling team productivity, eliminating sales-page delays and tracking event failures.',
+    exp2_role: 'IT and Hardware Teacher',
     exp2_period: 'Nov 2024 — Feb 2026',
-    exp2_desc: 'Taught IT and hardware courses, responsible for preparing educational content. Revamped course materials with updated topics like Roblox Studio, Python, SQL and Power BI. The new curriculum resulted in a 22% increase in course sales and MEC certification approval.',
-    exp3_role: 'FullStack Developer',
+    exp2_desc: 'Taught computing, hardware, networking and programming logic to students of all ages. Fully rewrote the school\'s course materials, replacing outdated content with Python, SQL, Power BI, Arduino and Roblox Studio. The new curriculum increased course sales by 22% and secured MEC certification approval.',
+    exp3_role: 'Full-Stack Developer (Back-End Focus)',
     exp3_period: 'Nov 2024 — Jul 2025',
-    exp3_desc: 'Developed and maintained a digital games e-commerce platform. Responsible for database creation, documentation and internal maintenance. Used an external database to optimize data entry, reducing delivery time from one year to just four months.',
+    exp3_desc: 'Designed the relational database with Prisma ORM and built the NestJS REST API for a digital games, gift cards and DLC e-commerce, with a Payload CMS admin panel and Swagger documentation. Built automated catalog ingestion from an external games database, cutting the project timeline from 1 year to 4 months (66% faster), with 100% of endpoints typed and documented.',
+    exp4_role: 'Software Technician',
+    exp4_period: 'Dec 2022 — Feb 2024',
+    exp4_desc: 'Performed advanced software diagnostics on smartphones, tablets and wearables with Samsung Global Diagnostics, plus firmware updates, backups and secure data restoration under strict SLAs. Consistently met Samsung\'s First Time Fix targets.',
+    exp5_role: 'Network & Infrastructure Support',
+    exp5_period: 'Apr 2018 — Feb 2022',
+    exp5_desc: 'Maintained computers, servers, structured cabling and networks for a contact center with 250+ seats. During the pandemic, I led the technical migration of the entire operation to remote work with VPN and security policies, with zero days of downtime, training 270 employees and no data leak incidents.',
 
     // Skills
     skills_title: 'Technical Skills',
     skills_subtitle: 'Technologies and tools I use daily',
     skills_tools: 'Tools',
     skills_extra: 'Extra Knowledge',
+    skills_testing: 'Testing, Cloud & DevOps',
 
     // Education
     edu_title: 'Education',
@@ -261,6 +269,9 @@ const translations = {
     edu_academic: 'Academic Education',
     edu_certs: 'Certifications & Courses',
     edu_langs: 'Languages',
+    edu0_title: 'Postgraduate Degree in Software Engineering with Applied AI',
+    edu0_period: 'Jun 2026 — Jul 2027 (in progress)',
+    edu0_desc: 'LLMs, generative AI APIs, MCP, autonomous agents (LangChain.js, LangGraph, CrewAI), AI system architecture, DevOps and AI security.',
     edu1_title: 'Systems Analysis and Development',
     edu1_desc: 'Technology degree focused on programming, web development, information security, cryptography, statistics and data analysis.',
     edu2_title: 'IT Technician',
@@ -269,33 +280,32 @@ const translations = {
     cert2_title: 'Back-End JavaScript and TypeScript — Beginner to Advanced',
     cert3_title: 'Front-End Development Serliv',
     lang_en: 'English',
-    lang_en_desc: 'Writing: Advanced | Reading: Advanced | Speaking: Intermediate',
+    lang_en_desc: 'Cambridge B2 — Writing: Advanced | Reading: Advanced | Speaking: Intermediate',
 
     // Projects
     proj_title: 'My Projects',
     proj_subtitle: 'Some of the projects I have built',
     proj_soon: 'Coming Soon',
-    proj_velkryon_desc: 'Professional VTT (Virtual Tabletop) platform for RPG. Includes character sheet systems, advanced automations for TaleSpire, and a dedicated subscription portal.',
-    proj_block_desc: 'Modular and high-performance rich-text editor. Focused on productivity with automatic offline saving and export to multiple formats (PDF/DOCX).',
-    proj1_desc: 'E-commerce platform for digital game sales. Full-stack development focused on backend, database and documentation.',
-    proj2_desc: 'Institutional website for an occupational health company. Responsive landing page focused on conversion and SEO.',
-    proj3_desc: 'Complete task management application with CRUD operations. Intuitive interface to create, edit, check and delete tasks.',
-    proj_canela_desc: 'High-performance website for Canela Café emporium. Features a premium experience with fluid transitions and responsive UI.',
-    proj_lepaiper_desc: 'Internal system I developed for Papelaria Lê Paiper. Focused on optimizing and automating business processes.',
-    proj_etarp_desc: 'Grupo ETARP — From production line labels to the system that governs your operations. Custom labels, commercial automation, hardware, and software.',
+    proj_velkryon_desc: 'Real-time multiplayer VTT (Virtual Tabletop) platform for RPG: 2D Canvas maps, 3D visualization, physics-based 3D dice, character sheet editor and map uploads to AWS S3, all synced via WebSockets.',
+    proj_block_desc: 'Notion-inspired block-based rich-text editor in a monorepo (editor, API and web app). Slash commands, automatic offline saving and in-browser export to DOCX and PDF.',
+    proj1_desc: 'Digital games, gift cards and DLC e-commerce. Database, documented REST API and automated catalog ingestion that cut the project timeline from 12 to 4 months.',
+    proj2_desc: 'Occupational Health & Safety (SST) and eSocial system for clinics: reception, triage and clinical exams, with E2E and API tests in Playwright.',
+    proj_canela_desc: 'Institutional website and specialty coffee e-commerce, with a filterable digital menu and a B2B area for office supply contracts. Custom pure-CSS design system.',
+    proj_lepaiper_desc: 'ERP for stationery stores and local retail: POS with change, discounts and real-time stock, revenue dashboard, average ticket and ABC curve, with secure login via Auth.js.',
+    proj_etarp_desc: 'Institutional website and industrial solutions catalog (labels, commercial automation and equipment rental), SEO-optimized for lead generation, with self-hosted fonts and zero CLS.',
     proj_soon_desc: 'Dorns Tracking Hub — Centralized advanced tracking (GTM/Meta Pixel) with real-time smart pixel routing for multiple e-commerce platforms.',
 
     // Contact
     contact_title: 'Contact',
     contact_subtitle: "Let's work together? Get in touch!",
-    contact_text: "I'm available for full-stack or back-end opportunities, both remote and hybrid. Send a message and I'll get back to you as soon as possible!",
+    contact_text: "I'm available for full-stack, front-end or back-end opportunities, remote, hybrid or on-site. Send a message and I'll get back to you as soon as possible!",
     contact_location: 'Location',
     contact_availability: 'Availability',
     contact_avail_text: 'Remote · Hybrid · On-site',
     form_send: 'Send Message',
 
     // Footer
-    footer_made: 'Eduardo Rihedy Dorneles — Full-Stack Web Developer',
+    footer_made: 'Eduardo Rihedy Dorneles — Full-Stack Developer',
     footer_rights: 'All rights reserved.',
   }
 };
