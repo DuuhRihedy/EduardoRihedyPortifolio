@@ -241,7 +241,7 @@ const translations = {
     exp_title: 'Professional Experience',
     exp_subtitle: 'My journey in the tech industry',
     exp1_role: 'Full-Stack Web Developer',
-    exp1_period: '2025 — Oct 2026',
+    exp1_period: 'Feb 2026 — Oct 2026',
     exp1_desc: 'Built and maintained the e-commerce web applications and landing pages on both front-end and back-end, integrating payment gateways, tracking (Bemob), Shopify (GemPages), WordPress (Elementor) and automated deployment via Cloudflare. Replaced generic management tools with an internal platform integrated into the codebase and brought AI (Claude Code) into the workflow, more than doubling team productivity, eliminating sales-page delays and tracking event failures.',
     exp2_role: 'IT and Hardware Teacher',
     exp2_period: 'Nov 2024 — Feb 2026',
